@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+--Cyan: hsl(179, 62%, 43%);
+--Bright-Yellow: hsl(71, 73%, 54%);
+}
+
+
+
+* { 
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--Light-Gray);
+}
+
+.Contenedor { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* outline: 3px black solid; */
+    width: 40%;
+    margin: auto;
+}
+.Contenedor-Grid { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "Join Join"
+                        "Subsciption WhyUS";
+    box-shadow: 0 1.3rem 1.5rem 0 rgba(184, 192, 200, 0.7);
+    border-radius: 15px;
+}
+.Contenedor-Flex__Join {
+    grid-area: Join;
+    background-color: #FFFFFF;
+    height: 250px;
+    border-radius: 10px 10px 0px 0px;
+    padding: 40px;
+
+}
+.Contenedor-Flex__Join__Cyan {
+    color: var(--Cyan);
+    font-size: 32px;
+}
+.Contenedor-Flex__Join__Yellow {
+    color: var(--Bright-Yellow);
+    margin: 30px 0px 15px 0px;
+    font-size: 24px;
+}
+.Contenedor-Flex__Join__text { 
+    color: var(--Grayish-Blue);
+    line-height: 1.5;
+}
+.Contenedor-Flex__Subsciption { 
+    grid-area:Subsciption;
+    background-color: var(--Cyan);
+    border-radius: 0px 0px 0px 10px;
+    height: 280px;
+    padding: 40px;
+}
+.Contenedor-Flex__Subsciption__White {
+    color: var(--Light-Gray);
+    font-size: 24px;
+    margin: 0px 0px 20px 0px;
+}
+.Contenedor-Flex__Subsciption__Price {
+    display: flex;
+    align-items: center;
+}
+.Price {
+    color: var(--Light-Gray);
+    font-size: 32px;
+    margin: 0px 10px 10px 0px;
+}
+.Contenedor-Flex__Subsciption__Month {
+    color: hsl(219, 22%, 75%);
+}
+.Contenedor-Flex__Subsciption__text {
+    color: var(--Light-Gray);
+    margin: 0px 0px 30px 0px;
+}
+.Contenedor-Flex__Subsciption__btn {
+    display: inline-block;
+    width: 245px;
+    height: 50px;
+    font-family: 'Karla', sans-serif;
+    color: var(--Light-Gray);
+    font-size: 18px;
+    background-color: var(--Bright-Yellow);
+     border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: -7px 7px 54px 0px rgba(0,0,0,0.35);
+}
+.Contenedor-Flex__WhyUS {
+    grid-area: WhyUS;
+    background-color: hsl(179, 61%, 49%);
+    border-radius: 0px 0px 10px 0px;
+    padding: 40px;
+    color: var(--Light-Gray);
+    height: 280px;
+
+}
+.Contenedor-Flex__WhyUS__Subtitulo {
+    margin: 0px 0px 15px 0px;
+}
+.Contenedor-Flex__WhyUS__Info {
+    margin: 0px 0px 5px 0px;
+}
+@media screen and (max-width:1505px){
+
+    .Contenedor {
+        max-width: none;
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+    }
+
+}
+@media screen and (max-width:650px){
+
+    .Contenedor-Grid { 
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "Join"
+                            "Subsciption"
+                            "WhyUS";
+        box-shadow: 0 1.3rem 1.5rem 0 rgba(184, 192, 200, 0.7);
+        border-radius: 15px;
+        width: 400px;
+    }
+    .Contenedor-Flex__Join {
+        grid-area: Join;
+        background-color: #FFFFFF;
+        height: 300px;
+        border-radius: 10px 10px 0px 0px; 
+        padding: 40px;
+    }
+    .Contenedor-Flex__Subsciption { 
+        grid-area:Subsciption;
+        background-color: var(--Cyan);
+        border-radius: 0px 0px 0px 0px;
+        height: 280px;
+        padding: 40px;
+    }
+    .Contenedor-Flex__WhyUS {
+        grid-area: WhyUS;
+        background-color: hsl(179, 61%, 49%);
+        border-radius: 0px 0px 10px 10px;
+        padding: 40px;
+        color: var(--Light-Gray);
+        height: 280px;
+    }
+    
+}
